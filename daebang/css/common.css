@@ -1,0 +1,10 @@
+body {
+  font: size 24px;
+  color: rgb(0, 94, 94);
+  font-family: "Hahmlet-Regular", "맑은 고딕";
+  font-weight: 400;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}

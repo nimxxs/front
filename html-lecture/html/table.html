@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table</title>
+    <link rel="shortcut icon" href="../images/apple.png" type="image/x-icon" />
+  </head>
+  <body>
+    <table border="1">
+      <colgroup>
+        <col style="width: 300px" />
+        <col style="width: 500px" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">제목</th>
+          <th scope="col">내용</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>오늘은 날씨가 덥습니다.</td>
+          <td>집에 가고 싶어요...</td>
+        </tr>
+        <tr>
+          <td>오늘은 날씨가 덥습니다.</td>
+          <td>집에 가고 싶어요...</td>
+        </tr>
+        <tr>
+          <td>오늘은 날씨가 덥습니다.</td>
+          <td>집에 가고 싶어요...</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <table border="1" width="800px">
+      <colgroup>
+        <col style="width: 30%" />
+        <col style="width: 30%" />
+        <col style="width: 30%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scope="col">주제</th>
+          <th scope="col">태그</th>
+          <th scope="col">비고</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="4">테이블의 구성요소</td>
+          <td>&lt;table&gt;</td>
+          <td>테이블을 만드는 태그</td>
+        </tr>
+        <tr>
+          <td>&lt;th&gt;</td>
+          <td>테이블의 헤더부분을 만드는 태그</td>
+        </tr>
+        <tr>
+          <td>&lt;tr&gt;</td>
+          <td>테이블의 행을 만드는 태그</td>
+        </tr>
+        <tr>
+          <td>&lt;td&gt;</td>
+          <td>테이블의 열을 만드는 태그</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <table border="1" width="800px">
+      <colgroup>
+        <col style="width: 14.28%" />
+        <col style="width: 14.28%" />
+        <col style="width: 14.28%" />
+        <col style="width: 14.28%" />
+        <col style="width: 14.28%" />
+        <col style="width: 14.28%" />
+        <col style="width: 14.28%" />
+      </colgroup>
+      <thead>
+        <tr>
+          <th scoope="col">월</th>
+          <th scoope="col">화</th>
+          <th scoope="col">수</th>
+          <th scoope="col">목</th>
+          <th scoope="col">금</th>
+          <th scoope="col">토</th>
+          <th scoope="col">일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td colspan="2">쌀밥</td>
+          <td colspan="3">잡곡밥</td>
+          <td>스파게티</td>
+          <td>짜장면</td>
+        </tr>
+        <tr>
+          <td>불고기</td>
+          <td>떡갈비</td>
+          <td>미니돈까스</td>
+          <td>오징어볶음</td>
+          <td>제육볶음</td>
+          <td rowspan="2">피클</td>
+          <td>단무지</td>
+        </tr>
+        <tr>
+          <td>배추김치</td>
+          <td>깍두기</td>
+          <td>미소된장국</td>
+          <td>동치미</td>
+          <td>고추절임</td>
+          <td>짬뽕국물</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+    <h1>이력서</h1>
+    <div>
+        <h2 style"font-weight: bold;">1. 인 적 사 항</h2>
+        <table border="1" width="800px">
+          <colgroup>
+            <col style="width: 15%" />
+            <col style="width: 35%" />
+            <col style="width: 15%" />
+            <col style="width: 35%" />
+          </colgroup>
+          <tbody>
+            <tr>
+              <th>성명(한글)</th>
+              <td></td>
+              <th>성명(영문)</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>생년월일</th>
+              <td></td>
+              <th>성별</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>병역사항</th>
+              <td></td>
+              <th>보훈 대상 여부</th>
+              <td></td>
+            </tr>
+            <tr>
+              <th>현주소</th>
+              <th colspan="3">&nbsp;</th>
+            </tr>
+            <tr>
+              <th>연락처</th>
+              <td></td>>
+              <th>E-Mail</th>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div>
+        <h2 style"font-weight: bold;">2. 학 력 사 항</h2>
+        <table border="1" width="800px">
+          <thead>
+            <tr>
+              <th>기간 (년, 월)</th>
+              <th>학교명 (학위)</th>
+              <th>전공학과</th>
+              <th>학점 / 만점</th>
+              <th>소재지</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div>
+        <h2 style"font-weight: bold;">3. 자 격 증 및 교 육 사 항</h2>
+        <table border="1" width="800px">
+            <colgroup>
+                <col style="width: 8%" />
+                <col style="width: 14.28%" />
+                <col style="width: 14.28%" />
+                <col style="width: 14.28%" />
+                <col style="width: 14.28%" />
+              </colgroup>
+            <tbody>
+            <tr>
+              <th rowspan="4">자격 / 면허</th>
+              <th>취득일자 (년,월)</th>
+              <th>자격 및 교육명</th>
+              <th>발급기관</th>
+              <th>점수 / 등급</th>
+            </tr>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th rowspan="3">외국인 공인시험</th>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div>
+        <h2 style"font-weight: bold;">4. 수 상 경 력</h2>
+        <table border="1" width="800px">
+          <colgroup>
+            <col style="width: 40%" />
+            <col style="width: 20%" />
+            <col style="width: 40%" />
+          </colgroup>
+          <thead>
+            <th>일자</th>
+            <th>단체</th>
+            <th>내용</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+    <div>
+        <h2 style"font-weight: bold;">5. 경 력 사 항</h2>
+        <table border="1" width="800px">
+          <colgroup>
+            <col style="width: 20%" />
+            <col style="width: 80%" />
+          </colgroup>
+          <thead>
+            <tr>
+              <th>회사명</th>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>근무기간</th>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <th>근무부서/지원</th>
+              <td>&nbsp;</td>
+            </tr>
+          </thead>
+        </table>
+    </div>
+  </body>
+</html>

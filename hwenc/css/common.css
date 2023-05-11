@@ -1,0 +1,10 @@
+body {
+  font: size 16px;
+  color: #e76c08;
+  font-family: "Raleway", "NeoDunggeunmoPro-Regular", "맑은 고딕";
+  font-weight: 900;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
