@@ -5,8 +5,12 @@
   background-color: rgba(255, 255, 255, 0);
   overflow: hidden;
   z-index: 99;
+  /* border-bottom: 1px solid #ccc; */
+  /* left: 100px;
+  top: 300px; */
   transition: all 0.5s ease;
 }
+/* psudo element */
 .header:after {
   content: "";
   display: block;
@@ -15,55 +19,49 @@
   background-color: #ccc;
   position: absolute;
   top: 100px;
+  z-index: -1;
 }
 .header:hover {
   height: 350px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 1);
 }
 .header:hover .list {
   color: #111;
-}
-.header:hover .logo a .black {
-  opacity: 1;
-}
-.header:hover .logo a .white {
-  opacity: 0;
 }
 .header .logo {
   position: absolute;
   height: 100px;
   display: flex;
   align-items: center;
+  /* outline: 1px solid #f00; */
   padding-left: 50px;
   padding-right: 50px;
 }
-.header .logo a white {
-  position: absolute;
-  transition: all 0.25s ease;
-}
-.header .logo a black {
-  opacity: 0;
-  transition: all 0.25s ease;
-}
-
-.gnb .list {
+.list {
   display: flex;
   justify-content: center;
   color: #fff;
 }
-.gnb .list > li .depth01 {
-  position: relative;
+.list .depth01 {
   font-size: 20px;
   font-weight: 500;
+  /* display: block;
+  line-height: 100px; */
   height: 100px;
+  /* width: 200px; */
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
   transition: all 0.25s ease;
+  border-bottom: 2px solid transparent;
+  /* outline: 1px solid #fc8803; */
 }
-.gnb .list > li .depth01:after {
+.list > li .depth01 {
+  position: relative;
+}
+.list > li .depth01:after {
   content: "";
   display: block;
   width: 100%;
@@ -76,23 +74,29 @@
   transition: all 0.25s ease;
   z-index: 1;
 }
-.gnb .list > li:hover .depth01 {
+.list > li:hover .depth01 {
   color: #f60;
+  /* border-bottom: 2px solid #f60; */
+  /* 공간이 생겨버리기에 depth01에도 하나 추가 */
 }
-.gnb .list > li:hover .depth01:after {
+.list > li:hover .depth01:after {
   transform: scaleX(1);
 }
-.gnb .list > li .depth02 {
+.list .depth02 {
   text-align: center;
+  text-align: left;
   padding-top: 10px;
 }
-.gnb .list > li .depth02 li a {
+.list .depth02 li a {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding-top: 10px;
   padding-bottom: 10px;
   transition: all 0.25s ease;
+}
+.list .depth02 li a:hover {
+  color: #f60;
 }
 
 .popup {
@@ -111,3 +115,16 @@
   background-color: #12c9f2;
   margin-bottom: 10px;
 }
+
+/* sass / scss */
+
+/* CSS에선 안됨
+.list {       
+  display: flex;
+  li {
+    .depth01 {
+      font-size: 20px;
+      font-weight:500;
+    }
+  }
+} */
