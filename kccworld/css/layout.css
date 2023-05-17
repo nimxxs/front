@@ -1,24 +1,62 @@
 .header {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100px;
-  background-color: #ffffff;
+  background-color: #f01616;
+  /* overflow: hidden;
+  z-index: 99;
+  transition: all 0.5s ease; */
 }
-.list {
+.header:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: #b80000;
+  position: absolute;
+  top: 100px;
+}
+.header:on {
+  height: 350px;
+  background-color: #f01616;
+}
+
+.gnb .list {
   display: flex;
   justify-content: center;
   color: #fff;
 }
-.list .depth01 {
+.gnb .list > li .depth01 {
+  position: relative;
   font-size: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   padding-left: 50px;
   padding-right: 50px;
+  transition: all 0.25s ease;
 }
-.list .depth02 {
-  display: flex;
+.gnb .list > li .depth01:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #101c52;
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  transform: scaleX(0);
+  transition: all 0.25s ease;
+  z-index: 1;
+}
+.gnb .list > li:hover .depth01 {
+  color: #f60;
+}
+.gnb .list > li .depth02 {
   text-align: center;
   padding-top: 15px;
+  display: flex;
+}
+.gnb .list > li .depth02 li a {
+  display
 }
