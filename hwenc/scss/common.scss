@@ -2,10 +2,10 @@
 
 body {
   font: size 16px;
-  color: #e76c08;
-  font-family: "Raleway", "NeoDunggeunmoPro-Regular", "맑은 고딕";
-  font-weight: 400;
-  min-height: 2000px;
+  color: #000000;
+  font-family: "Raleway", "TheJamsil5Bold", "맑은 고딕";
+  font-weight: 300;
+  min-height: 4000px;
 }
 a {
   text-decoration: none;
@@ -17,6 +17,7 @@ a {
     margin-right: auto;
     margin으로 묶어 쓸 수 있음 */
   margin: 0 auto;
+  position: relative;
   /* outline: 1px solid #f00; */
 }
 h2 {
@@ -33,4 +34,7 @@ P {
 }
 .point-color {
   color: $main-color;
+}
+.section {
+  padding: 100px 0;
 }

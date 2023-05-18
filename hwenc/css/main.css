@@ -4,9 +4,87 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+.main-visual .mask {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.main-visual .mask .list li .img {
+  height: 100vh;
+}
+.main-visual .mask .list li .txt {
+  position: absolute;
+  top: 50%;
+  left: 200px;
+  line-height: 1.5;
+  color: #fff;
+}
+.main-visual .mask .list li .txt .main {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.main-visual .mask .list li .txt .main:after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 20px 0;
+}
+.main-visual .mask .list li .txt .sub {
+  font-size: 20px;
+}
+.main-visual .mask .list li.visual01 .img {
+  background-image: url("../images/main/visual01.jpg");
+}
+.main-visual .mask .list li.visual02 .img {
+  background-image: url("../images/main/visual02.jpg");
+}
+.main-visual .mask .list li.visual03 .img {
+  background-image: url("../images/main/visual03.jpg");
+}
+.main-visual .mask .list li.visual04 .img {
+  background-image: url("../images/main/visual04.jpg");
+}
+.main-visual .mask .list li.visual05 .img {
+  background-image: url("../images/main/visual05.jpg");
+}
+.main-visual .mask .btns {
+  position: absolute;
+  left: 200px;
+  bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+  background-color: #f60;
+  border-radius: 100px;
+}
+.main-visual .mask .btns .pagination {
+  width: auto;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Noto Sans KR";
+  padding: 0 20px;
+}
+.main-visual .mask .btns button {
+  color: #fff;
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
+  width: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .business {
-  padding: 150px 0;
+  padding-bottom: 30px;
 }
 .business .list {
   display: flex;
@@ -20,16 +98,16 @@
   transform: translateY(0);
   opacity: 1;
 }
-.business .list li:nth-child(1) a::before {
+.business .list li:nth-child(1) a:before {
   background-image: url("../images/main/main_business_icon01.png");
 }
-.business .list li:nth-child(2) a::before {
+.business .list li:nth-child(2) a:before {
   background-image: url("../images/main/main_business_icon02.png");
 }
-.business .list li:nth-child(3) a::before {
+.business .list li:nth-child(3) a:before {
   background-image: url("../images/main/main_business_icon03.png");
 }
-.business .list li:nth-child(4) a::before {
+.business .list li:nth-child(4) a:before {
   background-image: url("../images/main/main_business_icon04.png");
 }
 .business .list li a {
@@ -110,10 +188,30 @@
 }
 .master-piece .case .menu li {
   width: 20%;
-  padding: 30px 0;
+  padding: 50px 0;
   text-align: center;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
   cursor: pointer;
+  transition: all 0.25s ease;
+  position: relative;
+}
+.master-piece .case .menu li span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+.master-piece .case .menu li:after {
+  font-family: "Material Icons";
+  content: "\e8e4";
+  display: block;
+  position: absolute;
+  right: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
   transition: all 0.25s ease;
 }
 .master-piece .case .menu li:last-child {
@@ -123,13 +221,20 @@
   background-color: #f60;
   border-right-color: #f60;
 }
+.master-piece .case .menu li:hover span {
+  left: 30px;
+  transform: translate(0, -50%);
+}
+.master-piece .case .menu li:hover:after {
+  opacity: 1;
+  right: 30px;
+}
 .master-piece .case .contents {
   position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #28c9ff;
 }
 .master-piece .case .contents li {
   position: absolute;
@@ -137,6 +242,11 @@
   top: 0;
   width: 100%;
   height: 100%;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.master-piece .case .contents li.on {
+  opacity: 1;
 }
 .master-piece .case .contents li:nth-child(1) {
   background-image: url("../images/layout/main_master_hover01.jpg");
@@ -229,6 +339,106 @@
   font-size: 24px;
 }
 
+.news-room .list {
+  display: flex;
+  justify-content: space-between;
+}
+.news-room .list li {
+  width: calc(33.33% - 20px);
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 20px;
+}
+.news-room .list li a .img-box {
+  overflow: hidden;
+}
+.news-room .list li a:hover img {
+  transform: scale(1.25);
+}
+.news-room .list li a img {
+  width: 100%;
+  transition: all 0.25s ease;
+}
+.news-room .list li a h3 {
+  font-size: 20px;
+  margin: 20px 0;
+  line-height: 1.25;
+}
+
+.social {
+  overflow: hidden;
+}
+.social .list li a .img-box {
+  position: relative;
+}
+.social .list li a .img-box img {
+  width: 100%;
+}
+.social .list li a .img-box .icon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+  border-radius: 100px;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+.social .list li a .img-box .icon.blog {
+  background-image: url("../images/layout/social_blog.png");
+}
+.social .list li a .img-box .icon.youtube {
+  background-image: url("../images/layout/social_youtube.png");
+}
+.social .list li h3 {
+  font-size: 18px;
+  line-height: 1.25;
+  margin-top: 20px;
+}
+.social .control-box {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  align-items: center;
+  margin-top: 30px;
+}
+.social .control-box .btns {
+  display: flex;
+  justify-content: end;
+  margin-left: 20px;
+}
+.social .control-box .btns button {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 100px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+}
+.social .control-box .pagination {
+  position: relative;
+  flex-grow: 1;
+}
+.social .control-box .pagination .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  background-color: #f60;
+}
+
+.more {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  display: flex;
+}
+.more:after {
+  font-family: "TheJamsil5Bold";
+  content: "\e5cc";
+  display: block;
+}
+
 .btn {
   width: 150px;
   height: 70px;
@@ -237,8 +447,8 @@
   border-radius: 100px;
   border: none;
   font-size: 20px;
-  font-family: "Noto Sans KR";
+  font-family: "TheJamsil5Bold";
   font-weight: 500;
-  text-shadow: 1px 1px 0px #00b7f4,2px 2px 0px #00b7f4,3px 3px 0px #00b7f4,4px 4px 0px #00b7f4,5px 5px 0px #00b7f4,6px 6px 0px #00b7f4,7px 7px 0px #00b7f4,8px 8px 0px #00b7f4,9px 9px 0px #00b7f4,10px 10px 0px #00b7f4,11px 11px 0px #00b7f4,12px 12px 0px #00b7f4,13px 13px 0px #00b7f4,14px 14px 0px #00b7f4,15px 15px 0px #00b7f4,16px 16px 0px #00b7f4,17px 17px 0px #00b7f4,18px 18px 0px #00b7f4,19px 19px 0px #00b7f4,20px 20px 0px #00b7f4,21px 21px 0px #00b7f4,22px 22px 0px #00b7f4,23px 23px 0px #00b7f4,24px 24px 0px #00b7f4,25px 25px 0px #00b7f4,26px 26px 0px #00b7f4,27px 27px 0px #00b7f4,28px 28px 0px #00b7f4,29px 29px 0px #00b7f4,30px 30px 0px #00b7f4,31px 31px 0px #00b7f4,32px 32px 0px #00b7f4,33px 33px 0px #00b7f4,34px 34px 0px #00b7f4,35px 35px 0px #00b7f4,36px 36px 0px #00b7f4,37px 37px 0px #00b7f4,38px 38px 0px #00b7f4,39px 39px 0px #00b7f4,40px 40px 0px #00b7f4,41px 41px 0px #00b7f4,42px 42px 0px #00b7f4,43px 43px 0px #00b7f4,44px 44px 0px #00b7f4,45px 45px 0px #00b7f4,46px 46px 0px #00b7f4,47px 47px 0px #00b7f4,48px 48px 0px #00b7f4,49px 49px 0px #00b7f4,50px 50px 0px #00b7f4;
+  text-shadow: 1px 1px 0px #2a6d86,2px 2px 0px #2a6d86,3px 3px 0px #2a6d86,4px 4px 0px #2a6d86,5px 5px 0px #2a6d86,6px 6px 0px #2a6d86,7px 7px 0px #2a6d86,8px 8px 0px #2a6d86,9px 9px 0px #2a6d86,10px 10px 0px #2a6d86,11px 11px 0px #2a6d86,12px 12px 0px #2a6d86,13px 13px 0px #2a6d86,14px 14px 0px #2a6d86,15px 15px 0px #2a6d86,16px 16px 0px #2a6d86,17px 17px 0px #2a6d86,18px 18px 0px #2a6d86,19px 19px 0px #2a6d86,20px 20px 0px #2a6d86,21px 21px 0px #2a6d86,22px 22px 0px #2a6d86,23px 23px 0px #2a6d86,24px 24px 0px #2a6d86,25px 25px 0px #2a6d86,26px 26px 0px #2a6d86,27px 27px 0px #2a6d86,28px 28px 0px #2a6d86,29px 29px 0px #2a6d86,30px 30px 0px #2a6d86,31px 31px 0px #2a6d86,32px 32px 0px #2a6d86,33px 33px 0px #2a6d86,34px 34px 0px #2a6d86,35px 35px 0px #2a6d86,36px 36px 0px #2a6d86,37px 37px 0px #2a6d86,38px 38px 0px #2a6d86,39px 39px 0px #2a6d86,40px 40px 0px #2a6d86,41px 41px 0px #2a6d86,42px 42px 0px #2a6d86,43px 43px 0px #2a6d86,44px 44px 0px #2a6d86,45px 45px 0px #2a6d86,46px 46px 0px #2a6d86,47px 47px 0px #2a6d86,48px 48px 0px #2a6d86,49px 49px 0px #2a6d86,50px 50px 0px #2a6d86;
   overflow: hidden;
 }
