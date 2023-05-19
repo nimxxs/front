@@ -85,12 +85,12 @@ const mainSwiper = new Swiper(".main-visual .mask", {
     prevE1: ".main-visual .btns .btn-prev",
   },
   pagination: {
-    el: ".main-visual .pafination",
+    el: ".main-visual .pagination",
     type: "fraction",
   },
 });
 
-//prettier-ginore
+//prettier-ignore
 const swiper = new Swiper(".social .mask", {
   speed: 600,
   slidesPerView: 4,

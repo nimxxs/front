@@ -1,0 +1,42 @@
+// 연습용
+
+@import "vars";
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  color: rgb(255, 255, 255);
+  background-color: rgb(40, 97, 97);
+  .logo a {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  .gnb {
+    .list {
+      display: flex;
+      > li {
+        border-radius: 0px 0px 20px 20px;
+        padding-bottom: 30px;
+      }
+      .depth01 {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: capitalize;
+        font-size: $h3;
+        font-weight: 500;
+        padding: 0 60px;
+        position: relative;
+      }
+      .depth02 {
+        text-align: center;
+        position: absolute;
+      }
+    }
+  }
+}

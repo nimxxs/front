@@ -1,0 +1,40 @@
+@import "vars";
+
+body {
+  font: size 16px;
+  color: #000000;
+  font-family: "Raleway", "TheJamsil5Bold", "맑은 고딕";
+  font-weight: 300;
+  min-height: 4000px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  width: 1200px;
+  /* margin-left: auto;
+    margin-right: auto;
+    margin으로 묶어 쓸 수 있음 */
+  margin: 0 auto;
+  position: relative;
+  /* outline: 1px solid #f00; */
+}
+h2 {
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 50px;
+}
+strong {
+  font-weight: 700;
+  /* 100/300/400/500/700/900 */
+}
+P {
+  line-height: 1.5;
+}
+.point-color {
+  color: $main-color;
+}
+.section {
+  padding: 100px 0;
+}
