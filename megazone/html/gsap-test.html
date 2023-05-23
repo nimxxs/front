@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메가존.디지털 기업DT 전문가 그룹</title>
+    <link rel="shortcut icon" href="../images/layout/MZ_favicon_16x16.png" type="image/x-icon" />
+
+    <script src="../js/greensock/gsap.min.js"></script>
+
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/font.css" />
+
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .red {
+        background-color: #f00;
+      }
+      .green {
+        background-color: #0f0;
+      }
+      .blue {
+        background-color: #00f;
+        /* transform: translateX(1200px); */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box red">red</div>
+    <div class="box green">green</div>
+    <div class="box blue">blue</div>
+    <script>
+      gsap.from(".box", { x: 1200, backgroundColor: "#000", color: "#fff", duration: 3, ease: "power3", delay: 1, stagger: 0.2 });
+    </script>
+  </body>
+</html>
