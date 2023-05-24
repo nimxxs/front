@@ -1,4 +1,5 @@
 @import "vars";
+@import "mixins";
 
 .main-visual {
   iframe {
@@ -30,6 +31,15 @@
     .list {
       li {
         width: 1160px;
+        a:hover {
+          img {
+            transform: scale(1.25);
+            transition: all 1s ease;
+          }
+        }
+        .img-box {
+          overflow: hidden;
+        }
         p {
           margin-top: 30px;
           font-size: $h3;
@@ -71,13 +81,13 @@
         transition: all 0.25s ease;
         &-active {
           width: 50px;
-          background-color: &main-color;
+          background-color: $main-color;
         }
       }
     }
   }
 }
-.parter {
+.partner {
   padding: 150px 0;
   background-color: $bg-color;
   overflow-x: hidden;
@@ -98,6 +108,127 @@
     }
   }
 }
+.effect {
+  //background-color: rgb(116, 165, 255);
+  // padding-top: 150px;
+  // padding-bottom: 150px;
+  // refactoring 해서 아래처럼 가공해줌
+  padding: 150px 0;
+  position: relative;
+  color: #fff;
+  .panel {
+    ul {
+      display: flex;
+      justify-content: space-between;
+      li {
+        width: 24%;
+        a:hover {
+          img {
+            transform: scale(1.25); // 1을 100%로 봄
+          }
+        }
+        .img-box {
+          overflow: hidden;
+        }
+        img {
+          width: 100%;
+          vertical-align: top;
+          transition: all 0.25s ease;
+          aspect-ratio: 1 / 1.5;
+        }
+      }
+    }
+  }
+  .bg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    aspect-ratio: 1 / 0.5625; // 넓이 / 높이;
+    z-index: -1;
+  }
+}
+.news {
+  width: 100%;
+  padding: 150px 0;
+  .title-box {
+    display: flex;
+    align-items: end;
+    h2 {
+      margin-bottom: 0;
+    }
+    .detail {
+      margin-left: 50px;
+      font-size: $h4;
+    }
+  }
+  .panel {
+    margin-top: 50px;
+    ul {
+      display: flex;
+      // justify-content: space-between;
+      gap: 0 20px; // margin 과 gap 의 차이는 좌우 인접 요소가 있을때 gap 이 생김.
+      li {
+        width: 33.33%;
+        .img-box {
+          img {
+            width: 100%;
+          }
+        }
+        .txt-box {
+          h3 {
+            margin: 20px 0 30px;
+            font-size: $h3;
+            @include ellipsis();
+          }
+          p {
+            @include multiEllipsis();
+          }
+        }
+      }
+    }
+  }
+}
+.recruit {
+  color: #fff;
+  padding: 150px 0;
+  background-image: url("../images/main/background.png");
+  .txt-box {
+    font-size: $h1 * 1.5;
+    font-weight: 900;
+    line-height: 1.5;
+    .rolling {
+      width: 450px;
+      height: 120px;
+      overflow: hidden;
+      display: inline-block;
+      text-align: center;
+      color: $main-color;
+      position: relative;
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 10px;
+        background-color: #fff;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  .more {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: $h4;
+    font-weight: 700;
+    background-color: $main-color;
+    @include longShadow(40, darken($main-color, 10)); //darken, lighten
+    overflow: hidden;
+  }
+}
 .title-box {
   h2 {
     font-size: $h1;
@@ -112,13 +243,20 @@
   p {
     font-size: $h3;
   }
+  .detail {
+    .material-icons {
+      vertical-align: middle;
+      margin-left: 10px;
+      margin-bottom: 6px;
+    }
+  }
 }
 
-@keyframes brand-motion {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
+// @keyframes brand-motion {
+//   0% {
+//     transform: translateX(0);
+//   }
+//   100% {
+//     transform: translateX(-100%);
+//   }
+// }

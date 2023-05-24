@@ -37,8 +37,7 @@
   height: 160px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.781);
-  -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   position: absolute;
   left: 0;
   top: -160px;
