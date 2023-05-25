@@ -144,7 +144,7 @@
 }
 .news .title-box .detail {
   margin-left: 50px;
-  font-size: 20px;
+  font-size: 18px;
 }
 .news .panel {
   margin-top: 50px;
@@ -204,13 +204,14 @@
   position: absolute;
   bottom: 0;
 }
-.recruit .more {
+
+.more {
   width: 200px;
   height: 60px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   background-color: #0b7bff;
   text-shadow: 1px 1px 0px #0063d7,2px 2px 0px #0063d7,3px 3px 0px #0063d7,4px 4px 0px #0063d7,5px 5px 0px #0063d7,6px 6px 0px #0063d7,7px 7px 0px #0063d7,8px 8px 0px #0063d7,9px 9px 0px #0063d7,10px 10px 0px #0063d7,11px 11px 0px #0063d7,12px 12px 0px #0063d7,13px 13px 0px #0063d7,14px 14px 0px #0063d7,15px 15px 0px #0063d7,16px 16px 0px #0063d7,17px 17px 0px #0063d7,18px 18px 0px #0063d7,19px 19px 0px #0063d7,20px 20px 0px #0063d7,21px 21px 0px #0063d7,22px 22px 0px #0063d7,23px 23px 0px #0063d7,24px 24px 0px #0063d7,25px 25px 0px #0063d7,26px 26px 0px #0063d7,27px 27px 0px #0063d7,28px 28px 0px #0063d7,29px 29px 0px #0063d7,30px 30px 0px #0063d7,31px 31px 0px #0063d7,32px 32px 0px #0063d7,33px 33px 0px #0063d7,34px 34px 0px #0063d7,35px 35px 0px #0063d7,36px 36px 0px #0063d7,37px 37px 0px #0063d7,38px 38px 0px #0063d7,39px 39px 0px #0063d7,40px 40px 0px #0063d7;
